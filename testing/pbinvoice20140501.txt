@@ -1,0 +1,4 @@
+Compile, test, package and release Windows Peerunity build - 1.5
+Compile, test, package and release Linux Peerunity builds - 2
+
+Total hours - 3.5

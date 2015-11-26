@@ -1,0 +1,7 @@
+Team comms (IRC, CC, Skype, etc.) re: Peerunity testing
+Peerunity Gitian process pre-merge testing
+Peerunity Gitian pre-merge build output regression testing
+Peerunity Gitian compilation and testing w/ version fixes
+Peerunity issues tracking
+Peerunity coin control testing
+Peerunity regression testing
