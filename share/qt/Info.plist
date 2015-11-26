@@ -3,11 +3,11 @@
 <plist version="0.9">
 <dict>
   <key>CFBundleIconFile</key>
-  <string>bitcoin.icns</string>
+  <string>grantcoin.icns</string>
   <key>CFBundlePackageType</key>
   <string>APPL</string>
   <key>CFBundleGetInfoString</key>
-  <string>$VERSION, Copyright © 2009-$YEAR The Bitcoin developers</string>
+  <string>$VERSION, Copyright © 2014-$YEAR 7 Elements LLC & The Grantcoin Foundation</string>
   <key>CFBundleShortVersionString</key>
   <string>$VERSION</string>
   <key>CFBundleVersion</key>
@@ -15,9 +15,9 @@
   <key>CFBundleSignature</key>
   <string>????</string>
   <key>CFBundleExecutable</key>
-  <string>Bitcoin-Qt</string>
+  <string>Grantcoin</string>
   <key>CFBundleIdentifier</key>
-  <string>org.bitcoinfoundation.Bitcoin-Qt</string>
+  <string>org.grantcoin.Grantcoin</string>
 
   <key>CFBundleURLTypes</key>
   <array>
@@ -25,10 +25,10 @@
       <key>CFBundleTypeRole</key>
       <string>Editor</string>
       <key>CFBundleURLName</key>
-      <string>org.bitcoin.BitcoinPayment</string>
+      <string>org.grantcoin.GrantcoinPayment</string>
       <key>CFBundleURLSchemes</key>
       <array>
-        <string>bitcoin</string>
+        <string>grantcoin</string>
       </array>
     </dict>
   </array>
@@ -37,9 +37,9 @@
   <array>
     <dict>
       <key>UTTypeIdentifier</key>
-      <string>org.bitcoin.paymentrequest</string>
+      <string>org.grantcoin.paymentrequest</string>
       <key>UTTypeDescription</key>
-      <string>Bitcoin payment request</string>
+      <string>Grantcoin payment request</string>
       <key>UTTypeConformsTo</key>
       <array>
         <string>public.data</string>
@@ -47,10 +47,10 @@
       <key>UTTypeTagSpecification</key>
       <dict>
         <key>public.mime-type</key>
-        <string>application/x-bitcoin-payment-request</string>
+        <string>application/x-grantcoin-payment-request</string>
         <key>public.filename-extension</key>
         <array>
-          <string>bitcoinpaymentrequest</string>
+          <string>grantcoinpaymentrequest</string>
         </array>
       </dict>
     </dict>
@@ -63,7 +63,7 @@
       <string>Editor</string>
       <key>LSItemContentTypes</key>
       <array>
-        <string>org.bitcoin.paymentrequest</string>
+        <string>org.grantcoin.paymentrequest</string>
       </array>
       <key>LSHandlerRank</key>
       <string>Owner</string>
