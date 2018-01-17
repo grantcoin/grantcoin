@@ -53,8 +53,8 @@ win32 {
     BOOST_LIB_PATH=C:/deps/boost1.55-1.55.0+dfsg.orig/stage/lib
     BDB_INCLUDE_PATH=C:/deps/db5.3-5.3.28/build_unix
     BDB_LIB_PATH=C:/deps/db5.3-5.3.28/build_unix
-    OPENSSL_INCLUDE_PATH=C:/deps/openssl-1.0.2d/include
-    OPENSSL_LIB_PATH=C:/deps/openssl-1.0.2d
+    OPENSSL_INCLUDE_PATH=
+    OPENSSL_LIB_PATH=
     MINIUPNPC_INCLUDE_PATH=C:/deps/
     MINIUPNPC_LIB_PATH=C:/deps/miniupnpc
 }
@@ -485,7 +485,7 @@ OTHER_FILES += README.md \
 
 # platform specific defaults, if not overridden on command line
 isEmpty(BOOST_LIB_SUFFIX) {
-#    macx:BOOST_LIB_SUFFIX = -mt
+    macx:BOOST_LIB_SUFFIX = -mt
     windows:BOOST_LIB_SUFFIX = -mgw44-mt-1_53
     android:BOOST_LIB_SUFFIX = -gcc-mt-1_53
 }
@@ -496,7 +496,7 @@ isEmpty(BOOST_THREAD_LIB_SUFFIX) {
 
 isEmpty(BDB_LIB_PATH) {
     !linux:BDB_LIB_PATH = deps/lib
-#    macx:BDB_LIB_PATH = /opt/local/lib/db53
+    macx:BDB_LIB_PATH = /usr/local/Cellar/berkeley-db\@53/5.3.28/lib
     android:BDB_LIB_PATH = deps/lib
 }
 
@@ -506,16 +506,17 @@ isEmpty(BDB_LIB_SUFFIX) {
 
 isEmpty(BDB_INCLUDE_PATH) {
     !linux:BDB_INCLUDE_PATH = deps/include
-#    macx:BDB_INCLUDE_PATH = /opt/local/include/db53
+    macx:BDB_INCLUDE_PATH = /usr/local/Cellar/berkeley-db\@53/5.3.28/include
     android:BDB_INCLUDE_PATH = deps/include
 }
 
+#MacOS build assumes brew boost@1.5.7
 isEmpty(BOOST_LIB_PATH) {
-#    macx:BOOST_LIB_PATH = /opt/local/lib
+    macx:BOOST_LIB_PATH = /usr/local/Cellar/boost\@1.57/1.57.0/lib
 }
 
 isEmpty(BOOST_INCLUDE_PATH) {
-#    macx:BOOST_INCLUDE_PATH = /opt/local/include
+    macx:BOOST_INCLUDE_PATH = /usr/local/Cellar/boost\@1.57/1.57.0/include/
 }
 
 win32:DEFINES += WIN32
@@ -548,7 +549,9 @@ macx:QMAKE_CFLAGS_THREAD += -pthread
 macx:QMAKE_LFLAGS_THREAD += -pthread
 macx:QMAKE_CXXFLAGS_THREAD += -pthread
 macx:QMAKE_INFO_PLIST = share/qt/Info.plist
-macx:OPENSSL_INCLUDE_PATH = /opt/local/include
+macx:OPENSSL_INCLUDE_PATH = /usr/local/Cellar/openssl/1.0.2n/include
+macx:OPENSSL_LIB_PATH = /usr/local/Cellar/openssl/1.0.2n/lib
+
 
 # Set libraries and includes at end, to use platform-defined defaults if not overridden
 INCLUDEPATH += $$BOOST_INCLUDE_PATH $$BDB_INCLUDE_PATH $$OPENSSL_INCLUDE_PATH $$QRENCODE_INCLUDE_PATH
